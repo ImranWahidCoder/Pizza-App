@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza app</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Lato:ital,wght@1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+
+    <nav class="container py-4 mx-auto flex items-center justify-between">
+        <div>
+            <table>
+                <tr>
+                    <td><img src="/img/pizzalogo.jpg" alt="logo" height="60px" width="60px" draggable="false"
+                            style="border-radius: 10px;"></td>
+                    <td><span
+                            style="font-family: 'Balsamiq Sans', cursive;
+                        font-family: 'Lato', sans-serif;font-size:60px;color: #282828;font-weight: bolder;">Pizza</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="navlink">
+            <ul class="flex items-center">
+                <li class="ml-6"><a href="#">Menu</a></li>
+                <li class="ml-6"><a href="#">Offers</a></li>
+                <li class="ml-6"><a href="/register">Register</a></li>
+                <li class="ml-6"><a href="/login">Login</a></li>
+                <li class="ml-6"><a href="#"><img src="/img/cart2.png" alt="cart" height="60px" width="60px"
+                            draggable="false" style="border-radius: 20px;"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div style="background: url('img/tom.webp'); padding: 0;margin: 0;height: 480px;">
+        <section class="login flex justify-center pt-20">
+            <!-- component -->
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+                <div class="mb-4">
+                    <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                        Email
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="username"
+                        type="email" placeholder="Enter your mail-id">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
+                        id="password" type="password" placeholder="Enter your password">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="btn_primary text-white font-bold py-2 px-4 rounded-full" type="button">
+                        Log In
+                    </button>
+                    <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker ml-6" href="/register">
+                        Don't have an account?
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

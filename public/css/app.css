@@ -3,3 +3,93 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #282828;
 }
+
+.first {
+  background: url("/img/pizzabackground.jpg");
+  margin: 0;
+  padding: 0;
+  height: 600px;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #ee2020;
+}
+
+nav li a img:hover {
+  transition: all 0.7s ease-in-out;
+  filter: invert(100%);
+}
+
+.navlink {
+  background: #282828;
+  color: blanchedalmond;
+  border-radius: 20px;
+}
+
+.left {
+  margin-top: 100px;
+  color: white;
+  font-size: 30px;
+}
+
+.main {
+  color: white;
+  font-size: 90px;
+}
+
+.size {
+  background-color: gray;
+}
+
+.add-to-cart {
+  background-color: white;
+  border: 2px solid #e20c0c;
+  border-radius: 15px;
+  padding: 8px 20px 8px 20px;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: #e20c0c;
+  color: white;
+  padding: 8px 20px 8px 20px;
+  outline: none;
+  text-decoration: none;
+}
+
+#highlight {
+  margin: 30px;
+}
+
+.btn_primary {
+  font-size: larger;
+  background-color: #0d9e61;
+  outline: none;
+  transition: all 0.6s ease-in-out;
+  text-shadow: 10px 10px 10px black;
+}
+
+.btn_primary:hover {
+  outline: none;
+  background-color: #fa1008;
+}
+
+.amount {
+  color: orangered;
+}
+
+.login {
+  min-height: calc(1000vh-86px);
+}
+.login a {
+  color: #08e2a1;
+}
