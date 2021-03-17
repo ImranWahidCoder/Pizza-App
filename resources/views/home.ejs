@@ -37,7 +37,7 @@
                     <li class="ml-6"><a href="#">Offers</a></li>
                     <li class="ml-6"><a href="/register">Register</a></li>
                     <li class="ml-6"><a href="/login">Login</a></li>
-                    <li class="ml-6"><a href="#"><img src="/img/cart2.png" alt="cart" height="60px" width="60px"
+                    <li class="ml-6"><a href="/cart"><img src="/img/cart2.png" alt="cart" height="60px" width="60px"
                                 draggable="false" style="border-radius: 20px;"></a>
                     </li>
                 </ul>
@@ -61,96 +61,28 @@
     <section class="menu container max-auto py-8">
         <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
         <div class="grid grid-cols-4 gap-x-20 gap-y-12 mx-2">
-            <div class="w-64"
-                style="background: url('/img/cardback.jpg'); border-radius: 20px;box-shadow: 10px 10px 20px black;padding: 10px;">
-                <img class="h-40 mb-4 mx-auto" src="/img/tandoori-chicken.jpg" alt="pizza" style="border-radius: 20px;">
-                <div class="text-center">
-                    <h2 class="mb-4 px-2 py-2 text-lg"
-                        style="font-weight: bolder; border-radius: 10px; background-color: #282828; color: blanchedalmond;">
-                        Margherita</h2>
-                    <span class="size py-1 px-4 rounded-full text-center">Small</span>
-                    <div class="flex items-center justify-around mt-10" style="padding-bottom: 10px;">
-                        <span class="font-bold text-lg py-2 px-4"
-                            style="font-size: 20px;background-color: #282828; color: rgb(255, 208, 0); border-radius: 10px;">₹250</span>
-                        <button class="add-to-cart font-bold">
-                            <span>+</span>
-                            <span>Add</span>
-                        </button>
+            <% pizzas.forEach((pizza)=>
+                {%>
+                <div class="w-64"
+                    style="background: url('/img/cardback.jpg'); border-radius: 20px;box-shadow: 10px 10px 20px black;padding: 10px;">
+                    <img class="h-40 mb-4 mx-auto" src="/img/<%=pizza.image%>" alt="pizza"
+                        style="border-radius: 20px;" draggable="false">
+                    <div class="text-center">
+                        <h2 class="mb-4 px-2 py-2 text-lg"
+                            style="font-weight: bolder; border-radius: 10px; background-color: #282828; color: blanchedalmond;">
+                            <%=pizza.name %></h2>
+                        <span class="size py-1 px-4 rounded-full text-center"><%=pizza.size %></span>
+                        <div class="flex items-center justify-around mt-10" style="padding-bottom: 10px;">
+                            <span class="font-bold text-lg py-2 px-4"
+                                style="font-size: 20px;background-color: #282828; color: rgb(255, 208, 0); border-radius: 10px;">₹<%=pizza.price%></span>
+                            <button data-pizza="<%= JSON.stringify(pizza) %>" class="add-to-cart font-bold">
+                                <span>+</span>
+                                <span>Add</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="w-64"
-                style="background: url('/img/cardback.jpg'); border-radius: 20px;box-shadow: 10px 10px 20px black;padding: 10px;">
-                <img class="h-40 mb-4 mx-auto" src="/img/tandoori-chicken.jpg" alt="pizza" style="border-radius: 20px;">
-                <div class="text-center">
-                    <h2 class="mb-4 px-2 py-2 text-lg"
-                        style="font-weight: bolder; border-radius: 10px; background-color: #282828; color: blanchedalmond;">
-                        Margherita</h2>
-                    <span class="size py-1 px-4 rounded-full text-center">Small</span>
-                    <div class="flex items-center justify-around mt-10" style="padding-bottom: 10px;">
-                        <span class="font-bold text-lg py-2 px-4"
-                            style="font-size: 20px;background-color: #282828; color: rgb(255, 208, 0); border-radius: 10px;">₹250</span>
-                        <button class="add-to-cart font-bold">
-                            <span>+</span>
-                            <span>Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="w-64"
-                style="background: url('/img/cardback.jpg'); border-radius: 20px;box-shadow: 10px 10px 20px black;padding: 10px;">
-                <img class="h-40 mb-4 mx-auto" src="/img/tandoori-chicken.jpg" alt="pizza" style="border-radius: 20px;">
-                <div class="text-center">
-                    <h2 class="mb-4 px-2 py-2 text-lg"
-                        style="font-weight: bolder; border-radius: 10px; background-color: #282828; color: blanchedalmond;">
-                        Margherita</h2>
-                    <span class="size py-1 px-4 rounded-full text-center">Small</span>
-                    <div class="flex items-center justify-around mt-10" style="padding-bottom: 10px;">
-                        <span class="font-bold text-lg py-2 px-4"
-                            style="font-size: 20px;background-color: #282828; color: rgb(255, 208, 0); border-radius: 10px;">₹250</span>
-                        <button class="add-to-cart font-bold">
-                            <span>+</span>
-                            <span>Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="w-64"
-                style="background: url('/img/cardback.jpg'); border-radius: 20px;box-shadow: 10px 10px 20px black;padding: 10px;">
-                <img class="h-40 mb-4 mx-auto" src="/img/tandoori-chicken.jpg" alt="pizza" style="border-radius: 20px;">
-                <div class="text-center">
-                    <h2 class="mb-4 px-2 py-2 text-lg"
-                        style="font-weight: bolder; border-radius: 10px; background-color: #282828; color: blanchedalmond;">
-                        Margherita</h2>
-                    <span class="size py-1 px-4 rounded-full text-center">Small</span>
-                    <div class="flex items-center justify-around mt-10" style="padding-bottom: 10px;">
-                        <span class="font-bold text-lg py-2 px-4"
-                            style="font-size: 20px;background-color: #282828; color: rgb(255, 208, 0); border-radius: 10px;">₹250</span>
-                        <button class="add-to-cart font-bold">
-                            <span>+</span>
-                            <span>Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="w-64"
-                style="background: url('/img/cardback.jpg'); border-radius: 20px;box-shadow: 10px 10px 20px black;padding: 10px;">
-                <img class="h-40 mb-4 mx-auto" src="/img/tandoori-chicken.jpg" alt="pizza" style="border-radius: 20px;">
-                <div class="text-center">
-                    <h2 class="mb-4 px-2 py-2 text-lg"
-                        style="font-weight: bolder; border-radius: 10px; background-color: #282828; color: blanchedalmond;">
-                        Margherita</h2>
-                    <span class="size py-1 px-4 rounded-full text-center">Small</span>
-                    <div class="flex items-center justify-around mt-10" style="padding-bottom: 10px;">
-                        <span class="font-bold text-lg py-2 px-4"
-                            style="font-size: 20px;background-color: #282828; color: rgb(255, 208, 0); border-radius: 10px;">₹250</span>
-                        <button class="add-to-cart font-bold">
-                            <span>+</span>
-                            <span>Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+                <%})%>
         </div>
     </section>
 

@@ -38,8 +38,32 @@ nav li a img:hover {
   margin-top: 100px;
   color: white;
   font-size: 30px;
+  -webkit-animation: type 4s steps(22);
+          animation: type 4s steps(22);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid white;
 }
 
+@-webkit-keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 22ch;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 22ch;
+  }
+}
 .main {
   color: white;
   font-size: 90px;
@@ -91,5 +115,5 @@ nav li a img:hover {
   min-height: calc(1000vh-86px);
 }
 .login a {
-  color: #08e2a1;
+  color: #083be2;
 }
